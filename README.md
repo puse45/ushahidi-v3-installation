@@ -154,11 +154,11 @@ Apache2:
 
 Copy server/rewrite.htaccess to server/www/.htaccess
 
-        $ sudo mkdir /var/www/ushahidi
-        $ sudo mkdir /var/www/ushahidi/public_html
-        $ sudo mkdir /var/www/ushahidi/logs
-        $ sudo tee /var/www/ushahidi/logs/access.log
-        $ sudo tee /var/www/ushahidi/logs/error.log
+    $ sudo mkdir /var/www/ushahidi
+    $ sudo mkdir /var/www/ushahidi/public_html
+    $ sudo mkdir /var/www/ushahidi/logs
+    $ sudo tee /var/www/ushahidi/logs/access.log
+    $ sudo tee /var/www/ushahidi/logs/error.log
 
     $ sudo cp -r platform-client/ /var/www/ushahidi/public_html/
     $ sudo vi /etc/apache2/sites-available/ushahidi.conf
