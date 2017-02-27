@@ -48,38 +48,38 @@ Edit init.php and set `index_file` to `"index.php"` to include index.php in your
 
 # An important note on urls, docroots and base_url
 
-        $ sudo mkdir /var/www/myserver_ushahidi
-        $ sudo mkdir /var/www/myserver_ushahidi/public_html
-        $ sudo mkdir /var/www/myserver_ushahidi/logs
-        $ sudo tee /var/www/myserver_ushahidi/logs/access.log
-        $ sudo tee /var/www/myserver_ushahidi/logs/error.log
+    $ sudo mkdir /var/www/myserver_ushahidi
+    $ sudo mkdir /var/www/myserver_ushahidi/public_html
+    $ sudo mkdir /var/www/myserver_ushahidi/logs
+    $ sudo tee /var/www/myserver_ushahidi/logs/access.log
+    $ sudo tee /var/www/myserver_ushahidi/logs/error.log
 
 Enable writing to the logs, cache, and upload directories
 The webserver will need write access to logs, cache and upload directories. To do this run:
 
-        $ cd /Desktop/platform/
-        $ chmod 0777 application/logs application/cache application/media/uploads
+    $ cd /Desktop/platform/
+    $ chmod 0777 application/logs application/cache application/media/uploads
 
 # Installing dependencies
 
 We use Composer to manage server side dependencies. Once you have installed composer, you can run the update script with:
 
-        $ cd
+    $ cd
         
 //Composer for php -v 5
 
-        $ sudo apt-get install curl php5-cli git
-        $ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-        $ cd Desktop/platform/
-        $ sudo bin/update
-        $ cd ..
-        $ sudo cp -r platform/ /var/www/myserver_ushahidi/public_html/
-        $ cd /var/www/myserver_ushahidi/public_html/platform/
-        $ sudo chmod 0777 application/logs application/cache application/media/uploads
+    $ sudo apt-get install curl php5-cli git
+    $ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    $ cd Desktop/platform/
+    $ sudo bin/update
+    $ cd ..
+    $ sudo cp -r platform/ /var/www/myserver_ushahidi/public_html/
+    $ cd /var/www/myserver_ushahidi/public_html/platform/
+    $ sudo chmod 0777 application/logs application/cache application/media/uploads
 
 # Configuring Virtual Host
 
-        $ sudo vi /etc/apache2/sites-available/myserver.conf
+    $ sudo vi /etc/apache2/sites-available/myserver.conf
 Paste
 
         <VirtualHost *:80>
