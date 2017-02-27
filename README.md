@@ -94,8 +94,8 @@ Paste
                    </Directory>
         </VirtualHost>
 
-        $ sudo a2ensite myserver.conf
-        $ sudo vi /etc/hosts
+    $ sudo a2ensite myserver.conf
+    $ sudo vi /etc/hosts
 Paste
 
         127.0.0.1	myserver.com
@@ -110,7 +110,7 @@ Getting the client code
 
 First, you will need a copy of the source code, which lives in our Github repository:
 
-        $ git clone https://github.com/ushahidi/platform-client.git
+    $ git clone https://github.com/ushahidi/platform-client.git
 # Client dependencies
 First you'll need nodejs or io.js installed, npm takes care of the rest of our dependencies.
 
